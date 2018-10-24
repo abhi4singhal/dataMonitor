@@ -1,0 +1,74 @@
+.navbar{
+  position: fixed;
+  top:0;
+  height: 10%;
+  width: 100%;
+  background-color: #4b535d;
+}
+
+.navbar > .appTitle {
+  position: absolute;
+  left: 4%;
+  top: 35%;
+  font-family: Helvetica;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.4;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+.navbar > .navbarTabContainer{
+  position: absolute;
+  left: 20%;
+  top: 55%;
+  width: 35%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+}
+.navbar > .navbarTabContainer > .navbarTab{
+  margin-right: 10%;
+  bottom: 0;
+}
+
+.navbar > .navbarTabContainer > .navbarTab > a{
+  font-style: normal;
+  text-decoration: none;
+  color: white;
+}
+.navbar > .navbarTabContainer > .navbarTab[data-active="true"]{
+  border-bottom: 4px red solid;
+}
+
+.submenu[data-active="true"]{
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  top : 100%;
+  z-index: 10;
+}
+
+.submenu[data-active="false"]{
+  display: none;
+  z-index: 10;
+}
+
+.subMenuItem{
+  background-color: #4b535d;
+  line-height: 2;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  z-index: 11;
+}
+
+.submenu > .subMenuItem:last-child{
+  border-bottom: 1px solid white;
+}
